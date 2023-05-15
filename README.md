@@ -8,15 +8,24 @@ Write a program that takes some data as string input. Then it tries to find a po
 
 Also print the time it takes to get this nonce value.
 
-Compile and run (in Linux) : `g++ sha256.cpp mine.cpp -o nonce_finder && ./nonce_finder`
+## Instructions to Run
+1. Clone the repository
+2. Compile and run (in Linux) : `g++ sha256.cpp mine.cpp -o nonce_finder && ./nonce_finder`
 
-Sample Input
-
-`sadfalsfjklasjf`
-
-Sample Output
-
+Sample Input and Output
 ```
-0000004A7EE1BDD17BDD83C1BD7CB788CFD3D5EA730D47385273168AB2F5A357 468920
-Execution Time: 2.954565seconds
+Enter the input string: sadfalsfjklasjf
+Achieved hash: 0000004A7EE1BDD17BDD83C1BD7CB788CFD3D5EA730D47385273168AB2F5A357
+Nonce: 468920
+Execution Time: 2.859217seconds
 ```
+```
+Enter the input string: asdlkfasfjlaskjf
+Achieved hash: 00000CC340C935CC931ADFDB99BB9EAB77CEDC4CF32557192E13E07B2CADFE26
+Nonce: 559952
+Execution Time: 3.588365seconds
+```
+
+## Credits
+
+The SHA256 implementation (sha256.cpp and sha256.h) were taken from [here](http://www.zedwood.com/article/cpp-sha256-function)
