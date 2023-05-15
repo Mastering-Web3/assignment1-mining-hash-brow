@@ -9,6 +9,8 @@ const string target = "00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 int main()
 {
     string input;
+    cout << "Enter the input string: ";
+    cout.flush();
     getline(cin, input);
 
     long nonce = 1;
@@ -23,7 +25,7 @@ int main()
             c = (char)toupper(c);
 
         if(hash < target){
-            cout << hash << " " << nonce << "\n";
+            cout << "Achieved hash: " << hash << "\nNonce: " << nonce << "\n";
             break;
         }
 
